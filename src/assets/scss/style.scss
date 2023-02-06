@@ -1,0 +1,15 @@
+@use 'node_modules/bootstrap/scss/bootstrap.scss';
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REGOLE GENERALI */
+body{
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #D48F38;
+}
