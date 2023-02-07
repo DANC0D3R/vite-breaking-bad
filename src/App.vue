@@ -24,6 +24,7 @@ export default {
         eseguiListaCarte(){
           axios.get(store.url).then((response) =>{
             store.listaCard = response.data.data.slice(0,20)
+            store.loader = true
           })
         }
       },
@@ -33,7 +34,7 @@ export default {
 
 <template>
   <AppHeader message="Yu-Gi-Oh API"></AppHeader>
-  <AppMain></AppMain>
+  <AppMain :caricamento ="loader"></AppMain>
 </template>
 
 <style lang="scss">

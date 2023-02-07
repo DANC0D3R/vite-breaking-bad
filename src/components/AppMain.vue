@@ -21,8 +21,15 @@ import {store} from '../store'
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 d-flex flex-wrap justify-content-between my-2">
-                    <AppListCard v-for="(item, index) in store.listaCard" :key="index" :carta="item"></AppListCard>
+                <div >
+                    <!-- Caricamento -->
+                    <div v-if="store.loader == false" class="col-12 m-5 d-flex justify-content-center">
+                        <div class="spinner-border" role="status"></div>
+                    </div>
+                    <!-- Card -->
+                    <div v-else="store.loader == true" class="col-12 d-flex flex-wrap justify-content-between my-2">
+                        <AppListCard v-for="(item, index) in store.listaCard" :key="index" :carta="item"></AppListCard>
+                    </div>
                 </div>
             </div>
         </div>
