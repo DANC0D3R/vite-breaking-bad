@@ -1,5 +1,4 @@
 <script>
-// import {store} from '../store'
     export default {
         name: 'AppListCard',
         props:{
@@ -9,8 +8,8 @@
 </script>
 <template>
     <div>
-        <div >
-            <div class="card my-2" style="width: 18rem;">
+        <div>
+            <div class="card p-2 my-2" style="width: 19rem; height: 34rem; background-color: #D48F38;">
                 <img :src="carta.card_images[0].image_url" class="card-img-top" alt="url-immagine">
                 <div class="card-body">
                     <h5 class="card-title">{{carta.name}}</h5>
@@ -22,5 +21,5 @@
     </div>
 </template>
 <style lang="scss">
-    
+
 </style>

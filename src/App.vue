@@ -18,7 +18,7 @@ export default {
       },
       created(){
         this.eseguiListaCarte()
-
+        this.archetypeLista()
       },
       methods: {
         eseguiListaCarte(){
@@ -26,14 +26,19 @@ export default {
             store.listaCard = response.data.data.slice(0,20)
             store.loader = true
           })
+        },
+        archetypeLista(){
+          axios.get(store.archetype).then((response) =>{
+            store.archetypeArray = response.data
+          })
         }
       },
-      
     }
 </script>
 
 <template>
   <AppHeader message="Yu-Gi-Oh API"></AppHeader>
+  <SelectCard></SelectCard>
   <AppMain :caricamento ="loader"></AppMain>
 </template>
 

@@ -1,9 +1,11 @@
 <script>
 import AppListCard from './AppListCard.vue';
+import SelectCard from './SelectCard.vue';
 import {store} from '../store'
     export default {
         components:{
             AppListCard,
+            SelectCard,
         },
         data(){
             return{
@@ -16,18 +18,14 @@ import {store} from '../store'
     <div>
         <div class="container bg-white mt-2">
             <div class="row">
-                <div class="col-4 ">
-                    <select class="form-select  mt-3" aria-label="Default select example"> <option selected>Scegli La razza</option></select>
-                </div>
-            </div>
-            <div class="row">
                 <div >
+                    <SelectCard :tipo="store.listaCard"></SelectCard>
                     <!-- Caricamento -->
                     <div v-if="store.loader == false" class="col-12 m-5 d-flex justify-content-center">
                         <div class="spinner-border" role="status"></div>
                     </div>
                     <!-- Card -->
-                    <div v-else="store.loader == true" class="col-12 d-flex flex-wrap justify-content-between my-2">
+                    <div v-else class="col-12  my-2 d-flex flex-wrap justify-content-between">
                         <AppListCard v-for="(item, index) in store.listaCard" :key="index" :carta="item"></AppListCard>
                     </div>
                 </div>
