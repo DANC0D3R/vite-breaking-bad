@@ -6,6 +6,7 @@
         }
     }
 </script>
+
 <template>
     <div>
         <div>
@@ -16,10 +17,11 @@
                     <h6>{{carta.archetype}}</h6>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
+
+<!-- Stile -->
 <style lang="scss">
 
 </style>
