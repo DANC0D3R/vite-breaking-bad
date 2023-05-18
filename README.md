@@ -26,3 +26,6 @@ Creare un componente che mostri il numero totale di risultati ottenuti.
 
 Nota:
 Per capire come comunicare alle API l'archetype di cui volete vedere le carte, è necessario fare riferimento alla documentazione che trovate qui: https://ygoprodeck.com/api-guide/
+
+ <h1 align="center">Anteprima<h1>
+<div align="center"><img src="Traccia Esercizio - Parte 1.png" width="800">
